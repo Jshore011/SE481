@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="asteroid1.Irunextensionpoint" name="IRun Extension" schema="schema/asteroid1.Irunextensionpoint.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="asteroid1.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="asteroid1.commands.category"
+            name="Sample Command"
+            id="asteroid1.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="asteroid1.handlers.SampleHandler"
+            commandId="asteroid1.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="asteroid1.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="asteroid1.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="asteroid1.commands.sampleCommand"
+                  id="asteroid1.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="asteroid1.toolbars.sampleToolbar">
+            <command
+                  id="asteroid1.toolbars.sampleCommand"
+                  commandId="asteroid1.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Run asteroids">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

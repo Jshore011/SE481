@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Asteroidplugin2
+Bundle-SymbolicName: asteroidplugin2;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: asteroidplugin2
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Require-Bundle: asteroid1;bundle-version="1.0.0"
+Export-Package: asteroidplugin2package
+Import-Package: org.eclipse.core.runtime

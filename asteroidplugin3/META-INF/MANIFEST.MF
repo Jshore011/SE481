@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Asteroidplugin3
+Bundle-SymbolicName: asteroidplugin3;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: asteroidplugin3
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Require-Bundle: asteroidplugin2;bundle-version="1.0.0"
