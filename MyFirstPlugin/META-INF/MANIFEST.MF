@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MyFirstPlugin
+Bundle-SymbolicName: MyFirstPlugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Jess
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime;bundle-version="3.23.0"
+Automatic-Module-Name: MyFirstPlugin
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Export-Package: myfirstplugin,
+ myfirstplugin.handlers

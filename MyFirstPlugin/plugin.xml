@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="myfirstplugin.HelloWorld" name="Hello World" schema="schema/myfirstplugin.HelloWorld.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="MyFirstPlugin.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="MyFirstPlugin.commands.category"
+            name="Sample Command"
+            id="MyFirstPlugin.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="myfirstplugin.handlers.SampleHandler"
+            commandId="MyFirstPlugin.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="MyFirstPlugin.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="MyFirstPlugin.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="MyFirstPlugin.commands.sampleCommand"
+                  id="MyFirstPlugin.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="MyFirstPlugin.toolbars.sampleToolbar">
+            <command
+                  id="MyFirstPlugin.toolbars.sampleCommand"
+                  commandId="MyFirstPlugin.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

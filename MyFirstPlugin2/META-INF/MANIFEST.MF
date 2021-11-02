@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MyFirstPlugin2
+Bundle-SymbolicName: MyFirstPlugin2;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Jess
+Automatic-Module-Name: MyFirstPlugin2
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Require-Bundle: MyFirstPlugin;bundle-version="1.0.0"
